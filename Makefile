@@ -11,7 +11,7 @@ node_modules: package.json
 	@npm install
 
 build: node_modules
-	@webpack -p
+	@./node_modules/.bin/webpack -p
 
 test: build
 	@cd tests && ../node_modules/.bin/ui-tester-start .
